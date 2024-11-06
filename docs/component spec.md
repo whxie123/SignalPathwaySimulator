@@ -1,9 +1,7 @@
-User Type: Bioinformatics researchers, molecular biologists, etc.
+Data Manager: Manages the import, export, and storage of pathway data, supporting import of models in SBML format.
 
-User Needs: Users want to identify key nodes within signaling pathways and evaluate dynamic changes within pathways.
+Simulation Manager: Responsible for handling the dynamic simulation of signaling pathways, using the ODE solver from SciPy for numerical integration.
 
-Use Cases:
+Visualization Manager: Generates reaction network diagrams and concentration change curves to help users intuitively understand the model results.
 
-Users build a reaction network involving multiple signaling molecules and perform simulations to evaluate system behavior under different initial conditions.
-
-Users want to visualize the reaction network and time-dependent behavior of specific molecules to analyze system stability.
+Component Interaction: Users import model data via the Data Manager, the Simulation Manager performs the simulation, and finally, the Visualization Manager displays the results.

@@ -1,29 +1,26 @@
-# main.py
-# 内容：定义主程序入口，提供交互式功能
-
-from signalpathwaysimulator import Simulator, DataManager, VisualizationManager
+from signalpathwaysimulator import Simulator, VisualizationManager
 import numpy as np
 
 def main():
-    model_file = 'example_model.json'  # 示例模型文件路径
-
-    # 初始化数据管理器、模拟器和可视化管理器
-    data_manager = DataManager()
+    # Load the SBML model
+    model_file = 'D:/BIOEN 537/SignalPathwaySimulator/examples/BIOMD0000000010_url.xml' 
     simulator = Simulator(model_file)
-    visualization_manager = VisualizationManager()
 
-    # 导入模型数据
-    network_data = data_manager.import_model(model_file)
+    # Set initial conditions and time points
+    initial_conditions = [species['initial_concentration'] for species in simulator.species]
+    time_points = np.linspace(0, 4000, 40000)  # Define time points for simulation
 
-    # 运行仿真
-    initial_conditions = [1.0, 0.0, 0.0]  # 示例初始条件
-    time_points = np.linspace(0, 10, 100)  # 示例时间点
+    # Run the simulation
     results = simulator.run_simulation(initial_conditions, time_points)
+    
+    # Store the results in the simulator for visualization purposes
+    simulator.time_points = time_points
+    simulator.concentrations = {species['id']: results[:, idx] for idx, species in enumerate(simulator.species)}
+    
+    # Visualize the reaction network
+    visualization_manager = VisualizationManager(simulator)
+    visualization_manager.create_reaction_network()
+    visualization_manager.visualize()
 
-    # 可视化结果
-    visualization_manager.plot_network(network_data)
-    visualization_manager.plot_simulation_results(time_points, results)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

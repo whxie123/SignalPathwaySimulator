@@ -1,9 +1,7 @@
-User Type: Bioinformatics researchers, molecular biologists, etc.
+Users need a tool to identify key nodes within signaling pathways and evaluate how dynamic changes in these pathways impact cellular behavior and system stability.
+This tool addresses a critical need in systems biology, where understanding signaling dynamics can aid in drug discovery, uncover disease mechanisms, and predict cellular responses to various stimuli.
 
-User Needs: Users want to identify key nodes within signaling pathways and evaluate dynamic changes within pathways.
+Problem Importance: Signal transduction pathways control many essential cellular processes, such as growth, division, and apoptosis. Dysregulation of these pathways often leads to diseases like cancer and autoimmune disorders. A robust simulation tool helps researchers predict how perturbations in signaling pathways influence biological outcomes. Current tools often lack an intuitive interface for both data import/export and dynamic visualization, making it challenging for researchers to iteratively test hypotheses and interpret results effectively.
 
-Use Cases:
-
-Users build a reaction network involving multiple signaling molecules and perform simulations to evaluate system behavior under different initial conditions.
-
-Users want to visualize the reaction network and time-dependent behavior of specific molecules to analyze system stability.
+Use Cases: Users build and simulate reaction networks involving multiple signaling molecules to study system behavior under different initial conditions.
+Users visualize the reaction network structure and time-dependent molecular behavior, gaining insights into system stability and identifying possible therapeutic targets.

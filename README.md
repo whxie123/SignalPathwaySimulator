@@ -106,7 +106,6 @@ Future versions may include a GUI that can:
 This package was developed as a course project and may be extended to include more sophisticated features, such as stochastic simulations (Gillespie algorithm), parameter estimation, and sensitivity analysis. It currently provides a robust foundation for deterministic ODE-based modeling and rapid visualization.
 
 ## RESOURCES
-GitHub Link: [https://github.com/YourUsername/SignalPathwaySimulator]
-(Replace the above with your actual repository URL.)
+GitHub Link: [https://github.com/whxie123/SignalPathwaySimulator.git]
 
 These provide introductory examples on running simulations and visualizing results. Feel free to clone, modify, or contribute to this project. Feedback and pull requests are welcome!

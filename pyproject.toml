@@ -32,6 +32,7 @@ dependencies = [
     "python-libsbml>=5.20.0"
 ]
 
+
 [project.optional-dependencies]
 graphviz = ["pygraphviz>=1.7"]
 

@@ -2,12 +2,7 @@ import os
 import unittest
 import numpy as np
 
-# Update this import path to match the actual location of your Simulator and VisualizationManager classes
-# For example, if they are in a file named signalpathwaysimulator.py in the same directory:
-# from signalpathwaysimulator import Simulator, VisualizationManager
-
 from signalpathwaysimulator import Simulator, VisualizationManager
-
 
 def create_simple_test_model(file_path):
     

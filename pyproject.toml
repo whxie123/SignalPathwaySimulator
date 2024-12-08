@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signalpathwaysimulator"
+version = "0.1.0"
+description = "A signal pathway simulator package for SBML-based models."
+readme = "README.md"
+readme-content-type = "text/markdown"
+authors = [
+    { name = "Wenhui Xie", email = "whxie@uw.edu" }
+]
+license = { text = "MIT" }
+homepage = "https://github.com/whxie123/SignalPathwaySimulator"
+repository = "https://github.com/whxie123/SignalPathwaySimulator"
+documentation = "https://github.com/whxie123/SignalPathwaySimulator#readme"
+requires-python = ">=3.8"
+keywords = ["bioengineering", "SBML", "pathway simulation", "visualization"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "numpy>=1.21.0",
+    "scipy>=1.7.0",
+    "sympy>=1.9",
+    "matplotlib>=3.4.0",
+    "pygraphviz>=1.7",
+    "python-libsbml>=5.20.0"
+]
+
+[project.optional-dependencies]
+graphviz = ["pygraphviz>=1.7"]
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.setuptools.entry-points.console_scripts]
+signalpathwaysimulator = "signalpathwaysimulator.main:main"
